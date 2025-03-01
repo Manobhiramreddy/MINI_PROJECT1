@@ -21,8 +21,80 @@
 </head>
 <body>
     <h1>SIGN IN SUCCESSFUL</h1>
-    <br>
-    <a href="http://127.0.0.1:5501/index.html">CLICK HERE TO NAVIGATE TO farmhub.com</a>
+    <hr>
+    <div class="glitch-wrapper">
+        <div class="glitch" data-glitch="farmhub.com"><a href="http://127.0.0.1:5501/index.html">farmhub.com</a></div>
+     </div>
+     
+     <style>
+     .glitch-wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: #222;
+     }
+     
+     .glitch {
+        position: relative;
+        font-size: 119px;
+        font-weight: 700;
+        line-height: 1.2;
+        color: #ffffff00;
+        letter-spacing: 7px;
+        z-index: 1;
+     }
+     
+     .glitch:before,
+     .glitch:after {
+        display: block;
+        content: attr(data-glitch);
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.8;
+     }
+     
+     .glitch:before {
+        animation: glitch-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+        color: rgb(87, 85, 181);
+        z-index: -1;
+     }
+     
+     .glitch:after {
+        animation: glitch-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+        color: #607560;
+        z-index: -2;
+     }
+     
+     @keyframes glitch-color {
+        0% {
+           transform: translate(0);
+        }
+     
+        20% {
+           transform: translate(-5px, 5px);
+        }
+     
+        40% {
+           transform: translate(-5px, -5px);
+        }
+     
+        60% {
+           transform: translate(5px, 5px);
+        }
+     
+        80% {
+           transform: translate(5px, -5px);
+        }
+     
+        to {
+           transform: translate(0);
+        }
+     }
+     </style>
 </body>
 >>>>>>> 89a435b (Your message about the commit)
 </html>
